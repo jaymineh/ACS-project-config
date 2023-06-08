@@ -19,10 +19,3 @@ touch healthstatus
 sed -i "s/$db = mysqli_connect('mysql.tooling.svc.cluster.local', 'admin', 'admin', 'tooling');/$db = mysqli_connect('rds-database.cjxmj29rliol.eu-north-1.rds.amazonaws.com', 'vergil', 'spardason', 'toolingdb');/g" functions.php
 chcon -t httpd_sys_rw_content_t /var/www/html/ -R
 systemctl restart httpd
-
-
-
-
-
-
-
